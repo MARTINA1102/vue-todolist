@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	max-width: 900px;
+	margin: 0 auto;
+	background-color: beige;
+	padding: 3rem 1rem;
+}
+form{
+	text-align: center;
+	margin: 3rem;
+}
+.todo{
+	border-radius: 0.5px;
+	background-color: aliceblue;
+	padding: 1rem;
+	margin: 1rem;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+.done{
+	text-decoration: line-through;
+}
+.notdec{
+	text-decoration: none;
+}

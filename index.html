@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
+	<script src="script.js" defer></script>
+    <title>Vue To Do List</title>
+
+</head>
+<body>
+	<div id="root">
+		<div class="container">
+			<form @submit.prevent="addTodo">
+				<input @keyup.enter="addTodo" type="text" placeholder="New Todo" v-model="newTodo">
+				<button @click="addTodo">AGGIUNGI</button>	
+			</form>
+			<div class="lista">
+				<h2 v-if="todos.lenght==0">NON CI SONO TODO</h2>
+				<ul v-else>
+					<li v-for="(todo,i) in todos" class="todo" :class="todo.done===true? 'done':'notdec'">
+						<h3 @click="todo.done===true? todo.done===false: todo.done===true">{{todo.text}}</h3>
+						<i class="fas fa-times" @click="deleteTodo(i)"></i>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
