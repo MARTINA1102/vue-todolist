@@ -9,10 +9,12 @@
 	margin: 0 auto;
 	background-color: beige;
 	padding: 3rem 1rem;
+	color: black;
 }
 form{
 	text-align: center;
 	margin: 3rem;
+	color: black;
 }
 .todo{
 	border-radius: 0.5px;
@@ -22,6 +24,7 @@ form{
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
+	color: black;
 }
 .done{
 	text-decoration: line-through;

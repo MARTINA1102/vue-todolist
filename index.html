@@ -13,8 +13,7 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
-	<script src="script.js" defer></script>
+    
     <title>Vue To Do List</title>
 
 </head>
@@ -26,7 +25,7 @@
 				<button @click="addTodo">AGGIUNGI</button>	
 			</form>
 			<div class="lista">
-				<h2 v-if="todos.lenght==0">NON CI SONO TODO</h2>
+				<h2 v-if="todos.lenght===0">NON CI SONO TODO</h2>
 				<ul v-else>
 					<li v-for="(todo,i) in todos" class="todo" :class="todo.done===true? 'done':'notdec'">
 						<h3 @click="todo.done===true? todo.done===false: todo.done===true">{{todo.text}}</h3>
@@ -39,5 +38,7 @@
 		</div>
 
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" ></script>
+	<script src="script.js" ></script>
 </body>
 </html>
