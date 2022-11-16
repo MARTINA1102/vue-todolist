@@ -37,7 +37,7 @@ new Vue({
 		
 	methods:{
 		addTodo(){
-			if(this.newTodo){
+			if(this.newTodo.trim()){
 				this.todos.push({
 					text:this.newTodo,
 					done:false
