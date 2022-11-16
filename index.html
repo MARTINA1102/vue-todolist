@@ -28,7 +28,7 @@
 				<h2 v-if="todos.lenght===0">NON CI SONO TODO</h2>
 				<ul v-else>
 					<li v-for="(todo,i) in todos" class="todo" :class="todo.done===true? 'done':'notdec'">
-						<h3 @click="todo.done===true? todo.done===false: todo.done===true">{{todo.text}}</h3>
+						<h3 @click="change(i)">{{todo.text}}</h3>
 						<i class="fas fa-times" @click="deleteTodo(i)"></i>
 					</li>
 

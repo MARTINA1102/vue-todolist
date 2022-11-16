@@ -32,6 +32,7 @@ new Vue({
 			
 		],
 		newTodo:'',
+		
 	},
 		
 	methods:{
@@ -47,7 +48,9 @@ new Vue({
 			this.todos.splice(index,1);
 		},
 		
-		
+		change(i){
+			this.todos[i].done=!this.todos[i].done;
+		}
 
 	},
 	
