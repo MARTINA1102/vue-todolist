@@ -40,8 +40,9 @@ new Vue({
 			if(this.newTodo){
 				this.todos.push({
 					text:this.newTodo,
+					done:false
 				})
-				this.newTodo=''
+				this.newTodo='';
 			}
 		},
 		deleteTodo(index){
